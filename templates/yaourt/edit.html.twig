@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Yaourt{% endblock %}
+
+{% block body %}
+    <h1>Edit Yaourt</h1>
+
+    {{ include('yaourt/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_yaourt_index') }}">back to list</a>
+
+    {{ include('yaourt/_delete_form.html.twig') }}
+{% endblock %}

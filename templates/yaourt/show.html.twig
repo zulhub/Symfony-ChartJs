@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Yaourt{% endblock %}
+
+{% block body %}
+    <h1>Yaourt</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ yaourt.id }}</td>
+            </tr>
+            <tr>
+                <th>NbrYaourt</th>
+                <td>{{ yaourt.nbrYaourt }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ yaourt.createdAt ? yaourt.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_yaourt_index') }}">back to list</a>
+
+    <a href="{{ path('app_yaourt_edit', {'id': yaourt.id}) }}">edit</a>
+
+    {{ include('yaourt/_delete_form.html.twig') }}
+{% endblock %}

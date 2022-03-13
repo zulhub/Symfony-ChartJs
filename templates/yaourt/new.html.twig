@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Yaourt{% endblock %}
+
+{% block body %}
+    <h1>Create new Yaourt</h1>
+
+    {{ include('yaourt/_form.html.twig') }}
+
+    <a href="{{ path('app_yaourt_index') }}">back to list</a>
+{% endblock %}
